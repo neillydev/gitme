@@ -1,8 +1,18 @@
 import React from 'react';
+import styles from '../../styles/Hero.module.scss';
 
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <section className={styles.heroSection}>
+      <div className={styles.heroContainer}>
+        <div className={styles.heroHeader}>
+          <h1>The Modern Developer's Portfolio</h1>
+        </div>
+        <div className={styles.heroSubheader}>
+          <h4>No signup required.</h4>
+        </div>
+      </div>
+    </section>
   )
 }
 
