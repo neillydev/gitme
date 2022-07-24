@@ -7,6 +7,7 @@
     height: auto;
     top: 0px;
     transition: all 0.2s cubic-bezier(.17,.67,.83,.67); 
+    /* background-color: #181a21; Provides a color for the Nav header. Might want to leave this off, for now */
 }
 
 .navLogo {
@@ -20,6 +21,10 @@
     padding: 2.25rem 10rem;
     justify-content: space-between;
     width: 100%;
+}
+
+.navLogo a span {
+    color: #64ffda;
 }
 
 .navEnd {

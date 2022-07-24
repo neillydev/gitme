@@ -10,7 +10,7 @@ const Nav = () => {
             <nav className={styles.nav}>
                 <div className={styles.navLogo}>
                     <a href='/'>
-                        GitMe_
+                        Git<span>Me_</span>
                     </a>
                 </div>
                 <div className={styles.navList}>

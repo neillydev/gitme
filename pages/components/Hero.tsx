@@ -6,7 +6,7 @@ const Hero = () => {
     <section className={styles.heroSection}>
       <div className={styles.heroContainer}>
         <div className={styles.heroHeader}>
-          <h1>The Modern Developer's Portfolio</h1>
+          <h1>The <span>Modern</span> Developer's Portfolio</h1>
         </div>
         <div className={styles.heroSubheader}>
           <h4>No signup required.</h4>
