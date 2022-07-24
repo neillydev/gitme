@@ -1,0 +1,36 @@
+.navHeader {
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-box-align: center;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    transition: all 0.2s cubic-bezier(.17,.67,.83,.67); 
+}
+
+.navLogo {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 26px;
+    color: #fff;
+}
+
+.nav {
+    display: flex;
+    padding: 2.25rem 10rem;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navEnd {
+
+}
+
+.navGH {
+    cursor:default;
+}
+
+.navGH svg:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
