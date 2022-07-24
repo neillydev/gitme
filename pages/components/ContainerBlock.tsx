@@ -9,8 +9,8 @@ export default function ContainerBlock({ children, ...customMeta }: any) {
     const router = useRouter();
 
     const meta = {
-        title: "Vernon Neilly - Full Stack Developer",
-        description: `Over 10 years of experience. Let's get in touch.`,
+        title: "Git Me",
+        description: `The Modern Developer's Portfolio`,
         image: "/avatar.png",
         type: "website",
         ...customMeta,
@@ -24,14 +24,19 @@ export default function ContainerBlock({ children, ...customMeta }: any) {
                 <meta content={meta.description} name="description" />
                 <meta
                     property="og:url"
-                    content={`https://neilly.dev${router.asPath}`}
+                    content={``}
                 />
                 <link
                     rel="canonical"
-                    href={`https://neilly.dev${router.asPath}`}
+                    href={``}
                 />
+                <link rel="icon" type="image/png" href="/gitme.ico" />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" 
+                rel="stylesheet" />
                 <meta property="og:type" content={meta.type} />
-                <meta property="og:site_name" content="Vernon Neilly" />
+                <meta property="og:site_name" content="Git Me" />
                 <meta property="og:description" content={meta.description} />
                 <meta property="og:title" content={meta.title} />
                 <meta property="og:image" content={meta.image} />
