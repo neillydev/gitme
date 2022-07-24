@@ -11,6 +11,7 @@ const Hero = () => {
         <div className={styles.heroSubheader}>
           <h4>No signup required.</h4>
         </div>
+        <div className={styles.heroGrid}></div>
       </div>
     </section>
   )

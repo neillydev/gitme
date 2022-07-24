@@ -30,7 +30,7 @@
 
 .heroSubheader{
     display: inline-block;
-    color: #f0f0f0;
+    color: #d7d7d7;
     font-size: 18px;
     font-family: $serif-font;
     margin: 2rem 0;
@@ -38,4 +38,18 @@
 
 .heroSubheader h4 {
     font-weight: 400;
+}
+
+.heroGrid {
+    margin: 2rem;
+    width: 40%;
+    height: 50vh;
+    background-image:
+      repeating-linear-gradient(rgb(75, 75, 75) 0 1px, transparent 1px 100%),
+      repeating-linear-gradient(90deg, rgb(119, 119, 119) 0 1px, transparent 1px 100%);
+    background-blend-mode: difference;
+    background-size: 71px 71px;
+    border-radius: 16px;
+    border-color: #64ffda;
+    box-shadow: 0 0 40px 0px #64ffda;
 }
