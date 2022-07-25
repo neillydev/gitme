@@ -27,8 +27,26 @@
     color: #64ffda;
 }
 
-.navEnd {
+.navCenter {
+    max-width: 272px;
+    width: 100%;
+}
 
+.navSearch {
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 6px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.navSearch input {
+    outline: none;
+    background-color: #0f1017;
+    border: transparent;
+    color: #fff;
+    
 }
 
 .navGH {

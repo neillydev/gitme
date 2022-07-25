@@ -13,11 +13,11 @@ const Nav = () => {
                         Git<span>Me_</span>
                     </a>
                 </div>
-                <div className={styles.navList}>
-                    <ul>
-                        {/* <NavItem destination='/' itemText='' /> */}
-                    </ul>
-                </div>
+                <form className={styles.navCenter}>
+                    <div className={styles.navSearch}>
+                        <input type="text" name="search" placeholder='neillydev' />
+                    </div>
+                </form>
                 <div className={styles.navEnd}>
                     <a href='https://github.com/neillydev/gitme' target='_blank'>
                         <span className={styles.navGH}>
