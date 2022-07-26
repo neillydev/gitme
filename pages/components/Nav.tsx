@@ -1,10 +1,27 @@
 import Link from 'next/link';
-import React from 'react';
+import { useRouter } from 'next/router';
+import React, { useState } from 'react';
 import styles from '../../styles/Nav.module.scss';
 import NavItem from './NavItem';
 import Github from '../../public/github.svg';
 
 const Nav = () => {
+    const router = useRouter();
+    const [path, setPath] = useState('/@neillydev');
+
+    const handleChange = ((e: React.FormEvent<HTMLInputElement>) => {
+        e.preventDefault();
+        setPath(`/@${e.currentTarget.value}`);
+    });
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        router.push({
+            pathname: path,
+        })
+    }
+
     return (
         <header className={`${styles.navHeader}`}>
             <nav className={styles.nav}>
@@ -13,10 +30,10 @@ const Nav = () => {
                         Git<span>Me_</span>
                     </a>
                 </div>
-                <form className={styles.navCenter}>
+                <form className={styles.navCenter} onSubmit={handleSubmit}>
                     <div className={styles.navSearch}>
                         <span>@</span>
-                        <input type="text" name="search" placeholder='neillydev' />
+                        <input type="text" name="search" placeholder='neillydev' onChange={handleChange} />
                     </div>
                 </form>
                 <div className={styles.navEnd}>
