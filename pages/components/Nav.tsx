@@ -15,6 +15,7 @@ const Nav = () => {
                 </div>
                 <form className={styles.navCenter}>
                     <div className={styles.navSearch}>
+                        <span>@</span>
                         <input type="text" name="search" placeholder='neillydev' />
                     </div>
                 </form>
