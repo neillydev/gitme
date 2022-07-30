@@ -1,3 +1,55 @@
+@import 'colors';
+
 .portfolioContainer {
-    
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.portfolioLeft {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 80%;
+    background-color: $base-green;
+    border-radius: 8px;
+    margin: 0 0 0 10rem;
+}
+
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 100%;
+    background-color: $green;
+    border-radius: 8px;
+    /* padding: 4rem 0; */
+}
+
+.portfolioImg {
+    width: 200px;
+    height: 200px;
+    background-color: $dark-green;
+    border-radius: 8px;
+}
+
+.name {
+    margin: 1rem 0;
+    font-size: 24px;
+}
+
+.username {
+    font-size: 16px;
+}
+
+.username:before {
+    content: "";
+    display: inline-block;
+    width: 10%;
+    margin: 0 0.25rem 0 0;
+    vertical-align: middle;
+    border-bottom: 1px solid;
+    color: #4b4b4b;
 }
