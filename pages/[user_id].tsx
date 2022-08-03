@@ -15,7 +15,12 @@ const Portfolio = () => {
           </div>
         </div>
       </aside>
-      <div className={styles.portfolioRight}></div>
+      <div className={styles.portfolioRight}>
+        <div className={styles.portfolioWrapper}>
+          <div className={styles.featuredSection}></div>
+          <div className={styles.projectsSection}></div>
+        </div>
+      </div>
     </div>
   )
 }
