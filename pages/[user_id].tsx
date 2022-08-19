@@ -10,10 +10,14 @@ const Portfolio = () => {
       <aside className={styles.portfolioLeft}>
         <div className={styles.profileContainer}>
           <div className={styles.profileWrapper}>
-
             <div className={styles.portfolioImg}></div>
-            <div className={styles.name}>Vernon Neilly III</div>
-            <div className={styles.username}><span />neillydev</div>
+            <div className={styles.portfolioBio}>
+              <div className={styles.name}>Vernon Neilly III</div>
+              <div className={styles.username}><span />@neillydev</div>
+              <div className={styles.bio}>
+                Programming is my passion! I love being able to develop incredible creations with only an idea and a keyboard!
+              </div>
+            </div>
           </div>
         </div>
       </aside>
