@@ -24,9 +24,11 @@ const Portfolio = () => {
       <div className={styles.portfolioRight}>
         <div className={styles.portfolioWrapper}>
           <Tabs />
-          <div className={styles.featuredSection}></div>
-          <div className={styles.projectsSection}>
-            <Project />
+          {/* <div className={styles.featuredSection}></div> */}
+          <div className={styles.portfolioContent}>
+            <div className={styles.projectsSection}>
+              <Project />
+            </div>
           </div>
         </div>
       </div>

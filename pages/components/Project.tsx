@@ -5,9 +5,12 @@ import styles from '../../styles/Project.module.scss';
 const Project = () => {
   return (
     <div className={styles.projContainer}>
-        <div className={styles.project}>
-            
-        </div>
+      <div className={styles.projHeader}>
+        <h1>gitme</h1>
+      </div>
+      <div className={styles.project}>
+
+      </div>
     </div>
   )
 }

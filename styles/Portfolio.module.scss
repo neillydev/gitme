@@ -46,7 +46,7 @@
 .portfolioImg {
     width: 200px;
     height: 200px;
-    background-color: $gray;
+    background-color: $gray ;
     border-radius: 8px;
 }
 
@@ -88,4 +88,16 @@
     height: 100%;
     background-color: #0f1017;
     border-radius: 8px;
+    overflow: hidden;
+}
+
+.projectsSection {
+    padding: 2rem 10rem;
+    height: 80%;
+
+}
+
+.portfolioContent {
+    width: 100%;
+    height: 100%;
 }
