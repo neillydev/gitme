@@ -7,7 +7,8 @@ const Tabs = () => {
         <ul className={styles.tabList}>
             <li className={`${styles.tab} ${styles.tabSelected}`}>Overview</li>
             <li className={styles.tab}>Projects</li>
-            <li className={styles.tab}>Employment</li>
+            <li className={styles.tab}>Experience</li>
+            <li className={styles.tab}>Contact</li>
         </ul>
     </div>
   )
