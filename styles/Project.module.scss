@@ -1,22 +1,103 @@
 @import 'colors';
 @import 'fonts';
 
+@keyframes fadeHoverIn {
+    0% {
+        opacity: 0.2;
+        padding: 1.25rem;
+    }
+    100% {
+        opacity: 0.8;
+        padding: .75rem;
+    }
+}
+
+@keyframes fadeHoverOut {
+    0% {
+        opacity: 0.8;
+        padding: .75rem;
+    }
+    100% {
+        opacity: 0.2;
+        padding: 1.25rem;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        padding: 1rem 3rem;
+    }
+    100% {
+        opacity: 1;
+        padding: 3rem 3rem;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        padding: 3rem 3rem;
+    }
+    100% {
+        opacity: 0;
+        padding: 1rem 3rem;
+    }
+}
+
 .projContainer {
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: $green;
+    /* background-color: $green; */
     border-radius: 4px;
+    position: relative;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+    border-color: #30363d;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .projHeader {
-    padding: 3rem 2rem;
+    animation: fadeIn 0.5s ease forwards;
+    position: relative;
+    padding: 3rem 3rem;
+    z-index: 10;
     font-family: $base-font;
     h1{
         font-weight: 500;
+        color: #fff;
+        position: absolute;
     }
 }
 
-.project {
+.projectOverlay {
+    animation: fadeHoverOut 1s ease forwards;
+    padding: 1.25rem;
+    width: 100%;
+    height: 100%;            
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    z-index: 9;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%);
+}
 
+.projContainer:hover{
+    .projHeader{
+        animation: fadeOut 0.5s ease forwards;
+    }
+    .projectOverlay {
+        animation: fadeHoverIn 1s ease forwards;
+    }
+}
+
+.projectImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
 }
