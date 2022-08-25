@@ -26,6 +26,7 @@ const Portfolio = () => {
           <Tabs />
           {/* <div className={styles.featuredSection}></div> */}
           <div className={styles.portfolioContent}>
+            {/* <h1 className={styles.overviewHeader}>Featured Projects</h1> */}
             <div className={styles.projectsSection}>
               <Project />
             </div>
