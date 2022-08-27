@@ -30,7 +30,7 @@ const Portfolio = () => {
           <div className={styles.portfolioContent}>
             {/* <h1 className={styles.overviewHeader}>Featured Projects</h1> */}
             <div className={styles.projectsSection}>
-              <Project />
+              <a href='https://github.com/neillydev/gitme' target='_blank'><Project /></a>
             </div>
           </div>
         </div>
