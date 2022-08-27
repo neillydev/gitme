@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/Portfolio.module.scss';
+import Feed from './components/Feed';
 import Project from './components/Project';
 import Tabs from './components/Tabs';
 
@@ -32,6 +33,7 @@ const Portfolio = () => {
             <div className={styles.projectsSection}>
               <a href='https://github.com/neillydev/gitme' target='_blank'><Project /></a>
             </div>
+            <Feed /> 
           </div>
         </div>
       </div>

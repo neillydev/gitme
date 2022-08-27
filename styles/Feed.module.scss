@@ -1,0 +1,58 @@
+@import 'colors';
+@import 'fonts';
+
+@keyframes pulse {
+    from {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.feedSection {
+    height: 80%;
+    padding: 2rem 0 2rem 2rem;
+}
+
+.feedContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    border-radius: 4px;
+    position: relative;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+    border-color: #30363d;
+    border-radius: 8px;
+}
+
+.feedHeader {
+    padding: 1rem 1rem;
+    width: 15rem;
+    display: flex;
+    justify-content: space-between;
+    h2 {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+
+.live {
+    opacity: 0;
+    color: $base-green;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 0.01rem 0.75rem;
+    animation: pulse 2.25s ease-in-out infinite;
+}
