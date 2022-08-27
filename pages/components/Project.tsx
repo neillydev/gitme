@@ -18,12 +18,11 @@ const Project = () => {
         <h1>gitme</h1>
         <h2>The Modern Developer's Portfolio</h2>
       </div>
-      {/* <div className={styles.projectBody}>
-        <h2>The Modern Developer's Portfolio</h2>
-        <ExtSvg />
-      </div> */}
       <div className={styles.projectFooter}>
-        <a href='http://localhost:3000' target='_blank'><ExtSvg /></a>
+        <ExtSvg>
+        <a href='http://localhost:3000' target='_blank'></a>
+        </ExtSvg>
+        {/*  */}
       </div>
       <div className={styles.projectOverlay}>
         <img className={styles.projectImg} src="https://i.imgur.com/95sfhtr.png"></img>
