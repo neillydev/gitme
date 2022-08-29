@@ -1,5 +1,5 @@
 import '../styles/globals.scss';
-import Nav from './components/Nav';
+import Nav from '../src/components/Nav';
 
 function MyApp({ Component, pageProps }) {
   return (
