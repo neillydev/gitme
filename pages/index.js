@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
-import ContainerBlock from "./components/ContainerBlock";
-import Hero from "./components/Hero";
-
+import ContainerBlock from "../src/components/ContainerBlock";
+import Hero from "../src/components/Hero";
 const Homepage = () => {
 
   return (
