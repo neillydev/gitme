@@ -11,7 +11,7 @@ const Feed = () => {
                     <span className={styles.live}>Live</span>
                 </div>
                 <div className={styles.feedBody}>
-
+                    
                 </div>
             </div>
         </div>
