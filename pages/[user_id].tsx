@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import styles from '../styles/Portfolio.module.scss';
-import Feed from './components/Feed';
-import Project from './components/Project';
-import Tabs from './components/Tabs';
+import Feed from '../src/components/Feed';
+import Project from '../src/components/Project';
+import Tabs from '../src/components/Tabs';
+import Overview from '../src/components/Overview';
 
 
 const Portfolio = () => {
   const [selected, setSelected] = useState(0);
+
+  const tabPages: {[key: number]: JSX.Element } = {
+    0: <Overview />
+  };
+
   return (
     <div className={styles.portfolioContainer}>
       <aside className={styles.portfolioLeft}>
@@ -31,10 +37,7 @@ const Portfolio = () => {
           {/* <div className={styles.featuredSection}></div> */}
           <div className={styles.portfolioContent}>
             {/* <h1 className={styles.overviewHeader}>Featured Projects</h1> */}
-            <div className={styles.projectsSection}>
-              <a href='https://github.com/neillydev/gitme' target='_blank'><Project /></a>
-            </div>
-            <Feed /> 
+            {tabPages[selected]}
           </div>
         </div>
       </div>
