@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import styles from '../../styles/Tabs.module.scss';
 
-const Tabs = () => {
-  const [selected, setSelected] = useState(0);
+type Props = {
+  selected: number;
+  setSelected: React.Dispatch<React.SetStateAction<number>>;
+};
+
+const Tabs = ({ selected, setSelected }: Props) => {
 
   return (
     <div className={styles.tabContainer}>

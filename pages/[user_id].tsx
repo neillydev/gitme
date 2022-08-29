@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/Portfolio.module.scss';
 import Feed from './components/Feed';
 import Project from './components/Project';
@@ -6,6 +6,7 @@ import Tabs from './components/Tabs';
 
 
 const Portfolio = () => {
+  const [selected, setSelected] = useState(0);
   return (
     <div className={styles.portfolioContainer}>
       <aside className={styles.portfolioLeft}>
@@ -26,7 +27,7 @@ const Portfolio = () => {
       </aside>
       <div className={styles.portfolioRight}>
         <div className={styles.portfolioWrapper}>
-          <Tabs />
+          <Tabs selected={selected} setSelected={setSelected} />
           {/* <div className={styles.featuredSection}></div> */}
           <div className={styles.portfolioContent}>
             {/* <h1 className={styles.overviewHeader}>Featured Projects</h1> */}
