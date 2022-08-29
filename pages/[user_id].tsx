@@ -5,6 +5,8 @@ import Project from '../src/components/Project';
 import Tabs from '../src/components/Tabs';
 import Overview from '../src/components/Overview';
 import Projects from '../src/components/Projects';
+import Experience from '../src/components/Experience';
+import Contact from '../src/components/Contact';
 
 
 const Portfolio = () => {
@@ -12,7 +14,9 @@ const Portfolio = () => {
 
   const tabPages: {[key: number]: JSX.Element } = {
     0: <Overview />,
-    1: <Projects />
+    1: <Projects />,
+    2: <Experience />,
+    3: <Contact />
   };
 
   return (
