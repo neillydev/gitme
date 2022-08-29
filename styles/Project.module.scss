@@ -119,12 +119,11 @@
 }
 
 .projectFooter {
-    animation: fadeIn 0.5s ease forwards;
     position: relative;
     z-index: 10;
     white-space: pre;
     svg{
-        bottom: 3rem;
+        top: 2rem;
         right: 2rem;
         position: absolute;
         stroke: #fff;
