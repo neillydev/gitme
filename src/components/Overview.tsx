@@ -4,12 +4,14 @@ import Feed from './Feed';
 import Project from './Project';
 
 const Overview = () => {
-  return (
-    <><div className={styles.projectsSection}>
-    <a href='https://github.com/neillydev/gitme' target='_blank'><Project /></a>
-  </div>
-  <Feed /> </>
-  )
-}
+    return (
+        <>
+            <div className={styles.projectsSection}>
+                <a href='https://github.com/neillydev/gitme' target='_blank'><Project /></a>
+            </div>
+            <Feed />
+        </>
+    )
+};
 
-export default Overview
+export default Overview;

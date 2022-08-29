@@ -4,13 +4,15 @@ import Feed from '../src/components/Feed';
 import Project from '../src/components/Project';
 import Tabs from '../src/components/Tabs';
 import Overview from '../src/components/Overview';
+import Projects from '../src/components/Projects';
 
 
 const Portfolio = () => {
   const [selected, setSelected] = useState(0);
 
   const tabPages: {[key: number]: JSX.Element } = {
-    0: <Overview />
+    0: <Overview />,
+    1: <Projects />
   };
 
   return (
