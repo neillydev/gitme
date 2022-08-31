@@ -7,6 +7,7 @@ import Overview from '../src/components/Overview';
 import Projects from '../src/components/Projects';
 import Experience from '../src/components/Experience';
 import Contact from '../src/components/Contact';
+import axios from 'axios';
 
 
 const Portfolio = () => {
@@ -17,6 +18,12 @@ const Portfolio = () => {
     1: <Projects />,
     2: <Experience />,
     3: <Contact />
+  };
+
+  const handleProfile = async () => {
+    await axios.get(`/api/portfolio`).then((result: any) => {
+      console.log(result);
+    });
   };
 
   return (
