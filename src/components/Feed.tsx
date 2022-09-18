@@ -1,17 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import moment from 'moment';
 
 import styles from '../../styles/Feed.module.scss';
+import { useRouter } from 'next/router';
+
 
 const Feed = () => {
     const [commits, setCommits] = useState([]);
+    const router = useRouter();
+    const { user_id } = router.query;
 
     const handleLoad = () => {
-        axios.get('/api/portfolio/feed').then(({ data }: any) => {
-            console.log(data)
-            setCommits(data.slice(0, 10));
-        });
+        if (user_id && typeof user_id === 'string') {
+            axios.get(`/api/portfolio/feed/${user_id.replace('@', '')}`).then(({ data }: any) => {
+                setCommits(data.slice(0, 10));
+            });
+        }
     }
 
     useEffect(() => {
@@ -28,8 +33,8 @@ const Feed = () => {
                 <div className={styles.feedBody}>
                     <ul>
                         {
-                            commits.map((commit: any) =>
-                                <li>
+                            commits.map((commit: any, index: number) =>
+                                <li key={index}>
                                     <div className={styles.commitDot}></div>
                                     <div className={styles.commitBody}>
                                         <div className={styles.commitDate}>{moment(commit.committer.date).fromNow()}</div>
