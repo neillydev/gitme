@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styles from '../styles/Portfolio.module.scss';
 import Feed from '../src/components/Feed';
 import Project from '../src/components/Project';
@@ -9,11 +9,17 @@ import Experience from '../src/components/Experience';
 import Contact from '../src/components/Contact';
 import axios from 'axios';
 
+import { useRouter } from 'next/router';
+
 
 const Portfolio = () => {
+  const router = useRouter();
+  const { user_id } = router.query;
+  const [portfolio, setPortfolio] = useState<any>();
+
   const [selected, setSelected] = useState(0);
 
-  const tabPages: {[key: number]: JSX.Element } = {
+  const tabPages: { [key: number]: JSX.Element } = {
     0: <Overview />,
     1: <Projects />,
     2: <Experience />,
@@ -21,10 +27,17 @@ const Portfolio = () => {
   };
 
   const handleProfile = async () => {
-    await axios.get(`/api/portfolio`).then((result: any) => {
-      console.log(result);
+    await axios.get(`/api/portfolio/${user_id}`).then(({data}: any) => {
+      setPortfolio(data);
     });
   };
+
+  useEffect(() => {
+    if(!user_id){
+      return;
+    }
+    handleProfile();
+  }, [user_id]);
 
   return (
     <div className={styles.portfolioContainer}>
@@ -35,10 +48,10 @@ const Portfolio = () => {
               <img src="https://avatars.githubusercontent.com/u/51303046?v=4" alt="profile picture" />
             </div>
             <div className={styles.portfolioBio}>
-              <div className={styles.name}>Vernon Neilly III</div>
-              <div className={styles.username}><span />@neillydev</div>
+              <div className={styles.name}>{portfolio.name}</div>
+              <div className={styles.username}><span />{user_id}</div>
               <div className={styles.bio}>
-                Programming is my passion! I love being able to develop incredible creations with only an idea and a keyboard!
+                {portfolio.bio}
               </div>
             </div>
           </div>
