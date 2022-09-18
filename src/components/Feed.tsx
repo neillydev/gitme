@@ -20,8 +20,9 @@ const Feed = () => {
     }
 
     useEffect(() => {
+        if(!user_id) return;
         if (commits.length === 0) handleLoad();
-    }, []);
+    }, [user_id]);
 
     return (
         <div className={styles.feedSection}>
