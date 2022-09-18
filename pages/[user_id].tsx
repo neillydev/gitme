@@ -45,13 +45,13 @@ const Portfolio = () => {
         <div className={styles.profileContainer}>
           <div className={styles.profileWrapper}>
             <div className={styles.portfolioImg}>
-              <img src="https://avatars.githubusercontent.com/u/51303046?v=4" alt="profile picture" />
+              <img src={portfolio?.avatar_url} alt="profile picture" />
             </div>
             <div className={styles.portfolioBio}>
-              <div className={styles.name}>{portfolio.name}</div>
+              <div className={styles.name}>{portfolio?.name}</div>
               <div className={styles.username}><span />{user_id}</div>
               <div className={styles.bio}>
-                {portfolio.bio}
+                {portfolio?.bio}
               </div>
             </div>
           </div>
