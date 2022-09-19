@@ -21,7 +21,7 @@ const Feed = () => {
 
     useEffect(() => {
         if(!user_id) return;
-        if (commits.length === 0) handleLoad();
+        handleLoad();
     }, [user_id]);
 
     return (
