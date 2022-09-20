@@ -19,27 +19,44 @@ const Project = () => {
   const [featuredProject, setFeaturedProject] = useState<any>();
   const [image, setImage] = useState('');
 
+  const getRepo = async (name: string) => {
+    
+    return await axios.get(`/api/portfolio/projects/${user_id}/readme/${name}`).then(({ data }: any) => {
+      if (data?.content?.length <= 0) return;
+      const content = atob(data.content);
+      const images = content.match(/(?<=src=").+?(?=")/g) || '';
+      if (!images) {
+        setImage('');
+      }
+      setImage(images[1]);
+    })
+  }
+
   const handleLoad = async () => {
-    await axios.get(`/api/portfolio/projects/${user_id}`).then(async ({data: { items }}) => {
-      if(user_id === '@neillydev') {
+    await axios.get(`/api/portfolio/projects/${user_id}`).then(async ({ data: { items } }) => {
+      if (user_id === '@neillydev') {
         const [repo] = items.filter((item: any) => item.name === 'gitme');
         setFeaturedProject(repo);
 
-        await axios.get(`/api/portfolio/projects/${user_id}/readme/${repo.name}`).then(({data}: any) => {
-          const content = atob(data.content);
-          const images = content.match(/(?<=src=").+?(?=")/g) || '';
-
-          setImage(images[1]);
-        });
+        getRepo(repo.name);
       }
-      else{
-
+      else {
+        if (items.length === 0) {
+          setFeaturedProject(null);
+          return;
+        }
+        let i = 0;
+        const repo = items[i];
+        setFeaturedProject(repo);
+        getRepo(repo.name).catch(() => {
+          setTimeout(() => getRepo(items[i++].name), 1000 * 3);
+        });
       }
     });
   };
 
   useEffect(() => {
-    if(!user_id) return;
+    if (!user_id) return;
     handleLoad();
   }, [user_id]);
 
@@ -51,7 +68,7 @@ const Project = () => {
       </div>
       <div className={styles.projectFooter}>
         <ExtSvg>
-        <a href='http://localhost:3000' target='_blank'></a>
+          <a href='http://localhost:3000' target='_blank'></a>
         </ExtSvg>
         {/*  */}
       </div>
