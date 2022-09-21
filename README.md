@@ -4,4 +4,4 @@
 </h1>
 
 <h4 align="center">The Modern Developer's Portfolio.</h4>
-<img src="https://i.imgur.com/95sfhtr.png" alt="Git Me" />
+<img src="https://i.imgur.com/45ELxNs.png" alt="Git Me" />
