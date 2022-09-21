@@ -3,7 +3,7 @@ import styles from '../../styles/Hero.module.scss';
 
 import PreviewXL from '../../public/Preview_Light.svg';
 import PreviewLarge from '../../public/Preview_Light_1600.svg';
-import Preview from '../../public/Preview_Light_1600.svg';
+import Preview from '../../public/Preview_Light_1290.svg';
 
 const Hero = () => {
   return (
