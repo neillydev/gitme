@@ -6,7 +6,7 @@
     width: 100%;
     height: auto;
     top: 0px;
-    transition: all 0.2s cubic-bezier(.17,.67,.83,.67); 
+    transition: all 0.2s cubic-bezier(.17, .67, .83, .67);
     /* background-color: #181a21; Provides a color for the Nav header. Might want to leave this off, for now */
 }
 
@@ -64,10 +64,55 @@
 }
 
 .navGH {
-    cursor:default;
+    cursor: default;
 }
 
 .navGH svg:hover {
     opacity: 0.75;
     cursor: pointer;
+}
+
+
+@media (max-width: 1600px) {
+    .navLogo {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1290px) {
+    .navLogo {
+        font-size: 20px;
+    }
+    .navSearch {
+        font-size: 12px;
+        line-height: 16px;
+
+        input {
+            font-size: 12px;
+        }
+    }
+}
+
+
+@media (max-width: 1150px) {
+    .nav {
+        padding: 2.25rem 6rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .navLogo {
+        font-size: 18px;
+    }
+    .nav {
+        padding: 2.25rem 4rem;
+    }
+    .navSearch {
+        font-size: 10px;
+        line-height: 14px;
+
+        input {
+            font-size: 10px;
+        }
+    }
 }
