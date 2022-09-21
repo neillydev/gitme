@@ -72,3 +72,19 @@
         /* box-shadow: #008f6d 0px 0px 40px 0px; */
     }
 }
+
+.previewXL {
+    display: block;
+}
+.previewLarge {
+    display: none;
+}
+
+@media (max-width: 1600px) {
+    .previewLarge {
+        display: block;
+    }
+    .previewXL {
+        display: none;
+    }
+}

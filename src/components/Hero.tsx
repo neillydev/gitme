@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from '../../styles/Hero.module.scss';
 
-import Preview from '../../public/Preview_Light.svg';
+import PreviewXL from '../../public/Preview_Light.svg';
+import PreviewLarge from '../../public/Preview_Light_1600.svg';
+import Preview from '../../public/Preview_Light_1600.svg';
 
 const Hero = () => {
   return (
@@ -15,7 +17,9 @@ const Hero = () => {
         </div>
         <div className={styles.heroGrid}>
           <div className={styles.previewWrapper}>
-            <Preview />
+            <PreviewXL className={styles.previewXL} />
+            <PreviewLarge className={styles.previewLarge} />
+            <Preview className={styles.preview} />
           </div>
         </div>
       </div>
