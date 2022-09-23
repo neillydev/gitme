@@ -4,9 +4,10 @@ import SearchSVG from '../../public/search.svg';
 import ConfusedSVG from '../../public/confused.svg';
 
 import styles from '../../styles/Projects.module.scss';
+import ProjectModule from './ProjectModule';
 
 const Projects = () => {
-    const [projectsArray, setProjectsArray] = useState([]);
+    const [projectsArray, setProjectsArray] = useState(['test']);
 
     const handleSearch = () => {
 
@@ -25,10 +26,17 @@ const Projects = () => {
                         <input type="text" name="search" placeholder='Search projects...' onChange={handleChange} />
                     </div>
                 </form>
-                {/* <ul className={styles.projectsList}></ul> */}
                 <div className={styles.projectsBody}>
                     {
-                        projectsArray.length > 0 ? null
+                        projectsArray.length > 0 ? 
+                        <ul className={styles.projectsList}>
+                            <ProjectModule />
+                            <ProjectModule />
+                            <ProjectModule />
+                            <ProjectModule />
+                            <ProjectModule />
+                            <ProjectModule />
+                        </ul>
                             :
                             <div className={styles.nothingFound}>
                                 <ConfusedSVG />
