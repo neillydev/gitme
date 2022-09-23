@@ -1,0 +1,21 @@
+@import 'colors';
+
+.modContainer {
+}
+
+.modWrapper {
+    box-shadow: 0 10px 30px -15px var(--navy-shadow);
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    height: 100%;
+    padding: 2rem 1.75rem;
+    border-radius: 4px;
+    background-color: $hub-gray;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    overflow: auto;
+}
