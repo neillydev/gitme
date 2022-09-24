@@ -1,6 +1,11 @@
 @import 'colors';
 
 .modContainer {
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.modContainer:hover {
+    transform: translate3d(0px, -10px, 0px);
 }
 
 .modWrapper {
@@ -16,6 +21,61 @@
     padding: 2rem 1.75rem;
     border-radius: 4px;
     background-color: $hub-gray;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     overflow: auto;
+    cursor: pointer;
 }
+
+
+
+.modWrapper:hover {
+
+    .modHeader {
+        h1 {
+            color: $green;
+        }
+    }
+}
+
+.modHead {
+    display: flex;
+    justify-content: space-between;
+
+    svg {
+        height: 25px;
+        width: 25px;
+    }
+}
+
+.modHead:hover {
+    svg {
+        stroke: $green;
+    }
+    & .modHeader {
+        h1 {
+            color: #fff !important;
+        }
+    }
+}
+
+.modHeader {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 1rem;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    h2 {
+        font-size: 16px;
+        color: #c3c7d2;
+        font-weight: 400;
+    }
+}
+
+.modBody {}
+
+.modFooter {}
