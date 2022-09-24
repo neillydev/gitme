@@ -1,13 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import SearchSVG from '../../public/search.svg';
 import ConfusedSVG from '../../public/confused.svg';
 
 import styles from '../../styles/Projects.module.scss';
 import ProjectModule from './ProjectModule';
+import axios from 'axios';
+import { useRouter } from 'next/router';
 
 const Projects = () => {
-    const [projectsArray, setProjectsArray] = useState(['test']);
+    const router = useRouter();
+    const { user_id } = router.query;
+    const [projectsArray, setProjectsArray] = useState([]);
+
+    const handleLoad = async () => {
+        if (user_id && typeof user_id === 'string') {
+            await axios.get(`/api/portfolio/projects/${user_id}`).then(({ data: { projects } }: any) => {
+                setProjectsArray(projects);
+            });
+        }
+    };
 
     const handleSearch = () => {
 
@@ -16,6 +28,10 @@ const Projects = () => {
     const handleChange = () => {
 
     };
+
+    useEffect(() => {
+        if(projectsArray.length === 0) handleLoad();
+    }, [projectsArray])
 
     return (
         <div className={styles.projectsContainer}>
@@ -28,15 +44,10 @@ const Projects = () => {
                 </form>
                 <div className={styles.projectsBody}>
                     {
-                        projectsArray.length > 0 ? 
-                        <ul className={styles.projectsList}>
-                            <ProjectModule />
-                            <ProjectModule />
-                            <ProjectModule />
-                            <ProjectModule />
-                            <ProjectModule />
-                            <ProjectModule />
-                        </ul>
+                        projectsArray.length > 0 ?
+                            <ul className={styles.projectsList}>
+                                {projectsArray.map((project: any) => <ProjectModule name={project?.name} description={project?.description} />)}
+                            </ul>
                             :
                             <div className={styles.nothingFound}>
                                 <ConfusedSVG />
