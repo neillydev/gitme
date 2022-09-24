@@ -33,23 +33,23 @@ const Project = () => {
   }
 
   const handleLoad = async () => {
-    await axios.get(`/api/portfolio/projects/${user_id}`).then(async ({ data: { items } }) => {
+    await axios.get(`/api/portfolio/projects/${user_id}`).then(async ({ data: { projects } }) => {
       if (user_id === '@neillydev') {
-        const [repo] = items.filter((item: any) => item.name === 'gitme');
+        const [repo] = projects.filter((item: any) => item.name === 'gitme');
         setFeaturedProject(repo);
 
         getRepo(repo.name);
       }
       else {
-        if (items.length === 0) {
+        if (projects.length === 0) {
           setFeaturedProject(null);
           return;
         }
         let i = 0;
-        const repo = items[i];
+        const repo = projects[i];
         setFeaturedProject(repo);
         getRepo(repo.name).catch(() => {
-          setTimeout(() => getRepo(items[i++].name), 1000 * 3);
+          setTimeout(() => getRepo(projects[i++].name), 1000 * 3);
         });
       }
     });
