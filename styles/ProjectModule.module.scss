@@ -29,7 +29,6 @@
 
 
 .modWrapper:hover {
-
     .modHeader {
         h1 {
             color: $green;
@@ -47,11 +46,12 @@
     }
 }
 
+.modSVG:hover {
+    stroke: $green;
+}
+
 .modHead:hover {
-    svg {
-        stroke: $green;
-    }
-    & .modHeader {
+    & > .modHeader {
         h1 {
             color: #fff !important;
         }
@@ -76,6 +76,10 @@
     }
 }
 
-.modBody {}
+.modBody {
 
-.modFooter {}
+}
+
+.modFooter {
+    
+}
