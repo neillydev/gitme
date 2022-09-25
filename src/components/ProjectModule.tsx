@@ -1,5 +1,6 @@
 import React from 'react';
 
+import ExtLinkSVG from '../../public/extlink.svg';
 import GithubSmSVG from '../../public/github_sm.svg';
 
 import styles from '../../styles/ProjectModule.module.scss';
@@ -17,7 +18,8 @@ const ProjectModule = ({
     <li className={styles.modContainer}>
       <div className={styles.modWrapper}>
         <div className={styles.modHead}>
-          <GithubSmSVG />
+          <ExtLinkSVG className={styles.modSVG} />
+          <GithubSmSVG className={styles.modSVG} />
         </div>
         <div className={styles.modHeader}>
           <h1>{name}</h1>
