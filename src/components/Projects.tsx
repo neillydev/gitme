@@ -46,7 +46,7 @@ const Projects = () => {
                     {
                         projectsArray.length > 0 ?
                             <ul className={styles.projectsList}>
-                                {projectsArray.map((project: any) => <ProjectModule name={project?.name} description={project?.description} html_url={project?.html_url} homepage_url={project?.homepage} />)}
+                                {projectsArray.map((project: any) => <ProjectModule name={project?.name} description={project?.description} html_url={project?.html_url} homepage_url={project?.homepage ? project?.homepage : project?.html_url} />)}
                             </ul>
                             :
                             <div className={styles.nothingFound}>
