@@ -89,4 +89,19 @@
     grid-auto-rows: 250px;
     gap: 15px;
     position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+
+.projectsList::-webkit-scrollbar {
+    display: none;
+  }
+
+.projectsBody::-webkit-scrollbar {
+    display: none;
+}
+
+.projectsBody {
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
 }
