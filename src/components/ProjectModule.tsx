@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 import ProjectSVG from '../../public/album.svg';
@@ -9,11 +10,15 @@ import styles from '../../styles/ProjectModule.module.scss';
 type Props = {
   name: string;
   description: string;
+  html_url: string;
+  homepage_url: string;
 };
 
 const ProjectModule = ({
   name,
-  description
+  description,
+  html_url,
+  homepage_url
 }: Props) => {
   return (
     <li className={styles.modContainer}>
@@ -23,8 +28,16 @@ const ProjectModule = ({
             <ProjectSVG />
           </div>
           <div className={styles.modRight}>
-            <ExtLinkSVG className={styles.modSVG} />
-            <GithubSmSVG className={styles.modSVG} />
+            <Link href={homepage_url}>
+              <a target='_blank'>
+                <ExtLinkSVG className={styles.modSVG} />
+              </a>
+            </Link>
+            <Link href={html_url}>
+              <a target='_blank'>
+                <GithubSmSVG className={styles.modSVG} />
+              </a>
+            </Link>
           </div>
         </div>
         <div className={styles.modHeader}>
