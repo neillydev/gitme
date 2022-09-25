@@ -1,5 +1,6 @@
 import React from 'react';
 
+import ProjectSVG from '../../public/album.svg';
 import ExtLinkSVG from '../../public/extlink.svg';
 import GithubSmSVG from '../../public/github_sm.svg';
 
@@ -10,22 +11,29 @@ type Props = {
   description: string;
 };
 
-const ProjectModule = ({ 
+const ProjectModule = ({
   name,
   description
- }: Props) => {
+}: Props) => {
   return (
     <li className={styles.modContainer}>
       <div className={styles.modWrapper}>
         <div className={styles.modHead}>
-          <ExtLinkSVG className={styles.modSVG} />
-          <GithubSmSVG className={styles.modSVG} />
+          <div className={styles.modLeft}>
+            <ProjectSVG />
+          </div>
+          <div className={styles.modRight}>
+            <ExtLinkSVG className={styles.modSVG} />
+            <GithubSmSVG className={styles.modSVG} />
+          </div>
         </div>
         <div className={styles.modHeader}>
           <h1>{name}</h1>
           <h2>{description}</h2>
         </div>
-        <div className={styles.modFooter}></div>
+        <div className={styles.modFooter}>
+
+        </div>
       </div>
     </li>
   )
