@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import styles from '../../styles/Nav.module.scss';
-import NavItem from './NavItem';
 import Github from '../../public/github.svg';
 
 const Nav = () => {
