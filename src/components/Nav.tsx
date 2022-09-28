@@ -40,7 +40,6 @@ const Nav = () => {
                         <span className={styles.navGH}>
                             {/* <img src="/github.svg" alt="GitMe Repository" /> */}
                             <Github />
-                            GitHub
                         </span>
                     </a>
                 </div>
