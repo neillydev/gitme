@@ -107,3 +107,8 @@
     font-size: 12px;
     padding: 0.25rem 0.75rem;
 }
+@media (max-width:490px){
+    .feedSection {
+        padding: 2rem 3rem 3rem 3rem;
+    }
+}
