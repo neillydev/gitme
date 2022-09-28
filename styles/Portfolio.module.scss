@@ -137,6 +137,7 @@
 
 @media (max-width: 490px) {
     .portfolioContainer {
+        overflow-y: auto;
         padding: 0;
         flex-direction: column;
     }
