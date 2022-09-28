@@ -186,5 +186,9 @@
     .heroGrid {
         width: 80%;
         height: 45vh;
+
+        svg {
+            display: none;
+        }
     }
 }
