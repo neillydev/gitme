@@ -165,9 +165,11 @@
     .projectOverlay {
         padding: 0;
         animation: none;
+        background: none;
     }
 
     .projectImg {
         object-fit: cover;
+        background: none;
     }
 }
