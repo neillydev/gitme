@@ -83,6 +83,7 @@
     .navLogo {
         font-size: 20px;
     }
+
     .navSearch {
         font-size: 12px;
         line-height: 16px;
@@ -104,15 +105,38 @@
     .navLogo {
         font-size: 18px;
     }
+
     .nav {
         padding: 2.25rem 4rem;
     }
+
     .navSearch {
         font-size: 10px;
         line-height: 14px;
 
         input {
             font-size: 10px;
+        }
+    }
+}
+
+@media(max-width:500) {
+    .nav {
+        padding: 1.25rem 2rem;
+    }
+
+    .navSearch {
+        font-size: 8px;
+        line-height: 8px;
+        display: flex;
+        align-items: center;
+
+        span {
+            font-size: 9px;
+        }
+        input {
+            font-size: 9px;
+            width: 100%;
         }
     }
 }
