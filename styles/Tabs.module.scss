@@ -26,3 +26,13 @@
 .tabSelected {
     background-color: #424242;
 }
+
+@media (max-width: 490px) {
+    .tabList {
+        justify-content: center;
+    }
+
+    .tab {
+        font-size: 10px;
+    }
+}
