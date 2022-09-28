@@ -121,6 +121,11 @@
 }
 
 @media(max-width:500) {
+    .navCenter{
+        max-width: 175px;
+        width: 100%;
+    }
+
     .nav {
         padding: 1.25rem 2rem;
     }
