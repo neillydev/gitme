@@ -145,7 +145,11 @@
 }
 
 @media (max-width: 490px) {
-    .projContainer {}
+    .projContainer {
+
+        border: none;
+        cursor: pointer;
+    }
 
     .projHeader {
         bottom: 0;
