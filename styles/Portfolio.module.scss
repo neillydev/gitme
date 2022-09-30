@@ -175,10 +175,7 @@
 @media (max-width: 900px) {
 
 }
-@media (max-width: 490px) {
-
-}
-@media (max-width: 490px) {
+@media (max-width: 900px) {
     .portfolioContainer {
         overflow-y: auto;
         padding: 0;
@@ -200,8 +197,8 @@
 
     .portfolioImg {
         img {
-            max-width: 6rem;
-            max-height: 6rem;
+            max-width: 10rem;
+            max-height: 10rem;
         }
     }
 
@@ -214,15 +211,15 @@
     .username,
     .username:before {
         color: #8892b0;
-        font-size: 14px;
-    }
-
-    .name {
         font-size: 18px;
     }
 
+    .name {
+        font-size: 24px;
+    }
+
     .bio {
-        font-size: 11px;
+        font-size: 14px;
         margin-top: 0.5rem;
     }
 
@@ -235,5 +232,29 @@
     .projectsSection {
         width: 70%;
         padding: 0;
+    }
+}
+
+
+@media (max-width: 490px) {
+    
+    .portfolioImg {
+        img {
+            max-width: 6rem;
+            max-height: 6rem;
+        }
+    }
+    .username,
+    .username:before {
+        font-size: 14px;
+    }
+
+    .name {
+        font-size: 18px;
+    }
+
+    .bio {
+        font-size: 11px;
+        margin-top: 0.5rem;
     }
 }
