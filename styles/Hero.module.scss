@@ -173,9 +173,27 @@
     }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 900px) {
     .heroHeader {
         width: 28rem;
+        font-size: 24px;
+    }
+
+    .heroSubheader {
+        font-size: 16px;
+    }
+
+    .heroGrid {
+        width: 80%;
+        height: 40vh;
+
+        svg {
+            display: none;
+        }
+    }
+}
+@media (max-width: 490px) {
+    .heroHeader {
         font-size: 18px;
     }
 
@@ -186,9 +204,5 @@
     .heroGrid {
         width: 80%;
         height: 45vh;
-
-        svg {
-            display: none;
-        }
     }
 }
