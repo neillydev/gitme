@@ -42,15 +42,14 @@
 }
 
 .portfolioBio {
-    margin: 2rem 0;
 
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    border-style: solid;
+    /* border-style: solid;
     border-width: 1px;
     border-radius: 6px;
-    border-color: #30363d;
+    border-color: #30363d; */
 }
 
 .portfolioImg {
@@ -70,12 +69,15 @@
 .name {
     /* margin: 1rem 0; */
     text-align: start;
-    font-size: 22px;
+    font-size: 28px;
+    color: #c9d1d9 !important;
+    font-weight: 600;
 }
 
 .username {
     text-align: start;
-    font-size: 16px;
+    font-size: 18px;
+    color: #8b949e !important;
 }
 
 .username:before {
@@ -85,13 +87,14 @@
     margin: 0 0.25rem 0 0;
     vertical-align: middle;
     border-bottom: 1px solid;
-    color: #fff;
+    color: #8b949e;
 }
 
 .bio {
     text-align: start;
     margin-top: 1rem;
     font-size: 14px;
+    color: #c9d1d9 !important;
 }
 
 .portfolioRight {
