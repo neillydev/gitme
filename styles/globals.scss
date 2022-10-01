@@ -42,3 +42,10 @@ input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px #0f1017 inset !important;
     -webkit-text-fill-color: #ffffffdb;
 }
+
+
+@media (max-width: 900px) {
+  html,body {
+    overflow-y: auto;
+  }
+}
