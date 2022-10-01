@@ -115,14 +115,14 @@
 
 @media (max-width:900px){
     .feedSection {
-        padding: 2rem 0 2rem 0;
+        padding: 2rem 0 0 0;
         max-width: none;
+        height: auto;
         width: auto;
     }
 }
 
 @media (max-width:490px){
     .feedSection {
-        padding: 2rem 3rem 3rem 3rem;
     }
 }
