@@ -144,6 +144,23 @@
     }
 }
 
+@media (max-width: 900px) {
+    .projHeader {
+        bottom: unset;
+        position: relative;
+        h1 {
+            font-size: 16px;
+            bottom: unset;
+            position: relative;
+        }
+
+        h2 {
+            font-size: 10px;
+            bottom: unset;
+            position: relative;
+        }
+    }
+}
 @media (max-width: 490px) {
     .projContainer {
 
