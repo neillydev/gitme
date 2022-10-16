@@ -9,6 +9,7 @@
 }
 
 .modWrapper {
+    overflow: hidden;
     box-shadow: 0 10px 30px -15px var(--navy-shadow);
     display: flex;
     -webkit-box-pack: justify;
