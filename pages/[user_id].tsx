@@ -49,7 +49,7 @@ const Portfolio = () => {
             </div>
             <div className={styles.portfolioBio}>
               <div className={styles.name}>{portfolio?.name}</div>
-              <div className={styles.username}><span />{user_id}</div>
+              <div className={styles.username}><span /><a target="_blank" href={`https://github.com/${user_id?.toString().split('@')[1]}`} rel="noopener noreferrer">{user_id}</a></div>
               <div className={styles.bio}>
                 {portfolio?.bio}
               </div>
