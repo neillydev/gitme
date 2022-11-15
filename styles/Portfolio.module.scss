@@ -90,6 +90,11 @@
     color: #8b949e;
 }
 
+.username:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .bio {
     text-align: start;
     margin-top: 1rem;
